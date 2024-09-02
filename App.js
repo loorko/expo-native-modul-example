@@ -1,23 +1,45 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { 
+  StyleSheet, 
+  Text, 
+  View,
+  Button,
+  Alert } from 'react-native';
 import * as ExpoExternalPurchase from 'expo-external-purchase';
 import { useEffect } from 'react';
 
 export default function App() {
   useEffect(()=>{
-    if (ExpoExternalPurchase && ExpoExternalPurchase.version) {
-      console.log(`ExpoExternalPurchase modul version: ${ExpoExternalPurchase.version}`);
-      console.log(ExpoExternalPurchase);
-    } else {
-      console.log('ExpoExternalPurchase version information not exist');
-    }
+    console.log(ExpoExternalPurchase);
   },[])
 
+  const checkIfCanPresent= async() => {
+    try {
+      const canPresent = await ExpoExternalPurchase.canPresentAsync();
+      if (canPresent) {
+        Alert.alert('The notice sheet can be presented.')
+        try {
+          const result = await ExpoExternalPurchase.presentNoticeSheetAsync('yolo');
+          console.log('Notice sheet presented successfully:', result);
+        } catch (error) {
+          console.error('Failed to present notice sheet:', error);
+        }
+      } else {
+        Alert.alert('The notice sheet cannot be presented.')
+      }
+    } catch (error) {
+      console.error('Failed to check if can present:', error);
+    }
+  }
+    
   return (
     <View style={styles.container}>
-      <Text>New content new build</Text>
+      <Text>Instacar</Text>
       <StatusBar style="auto" />
-      <Text>{ExpoExternalPurchase.hello()}</Text>
+      <Button
+        onPress={checkIfCanPresent}
+        title={'Apple Expo External Purchase'}
+      />
     </View>
   );
 }

@@ -2922,7 +2922,7 @@ expo-constants@~16.0.0:
     "@expo/config" "~9.0.0"
     "@expo/env" "~0.3.0"
 
-expo-dev-client@~4.0.25:
+expo-dev-client@^4.0.25:
   version "4.0.25"
   resolved "https://registry.yarnpkg.com/expo-dev-client/-/expo-dev-client-4.0.25.tgz#46987c2039f261e9f701966c3630cf970fe3cd1a"
   integrity sha512-yChhepKXvdw+1vXIayvnvU9s42DJfgmAtBC9JLu7Q+Bk/SqgLxmEBpcxj9iBhu9x79bnrbgHEkGaLi+N1PljyA==
@@ -2962,10 +2962,10 @@ expo-eas-client@~0.12.0:
   resolved "https://registry.yarnpkg.com/expo-eas-client/-/expo-eas-client-0.12.0.tgz#e8b6f7d33873e6f630f37f7bfc41646ae7b0b2a9"
   integrity sha512-Jkww9Cwpv0z7DdLYiRX0r4fqBEcI9cKqTn7cHx63S09JaZ2rcwEE4zYHgrXwjahO+tU2VW8zqH+AJl6RhhW4zA==
 
-expo-external-purchase@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/expo-external-purchase/-/expo-external-purchase-0.1.0.tgz#ab50d9230e19a532ac12d13ef7bef62790dbec39"
-  integrity sha512-zfN98feoUQdNyvg8zGgr+yir3feqGmNajEyCw3CxbeQl07cyhDDqdfbK1Qyw2xEQD3uBo1TBriRG1lY9bXnTjQ==
+expo-external-purchase@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/expo-external-purchase/-/expo-external-purchase-0.17.0.tgz#fa4b9ec0b49f336ecd381a817a31091dc89bba72"
+  integrity sha512-w9nmPxjuVgStFw1KCXfy0uY+41HApznXRz56ajZAdj6IcnOa/4MqWSUZP/qTsOY/6yaqF1Jhapdi00MDcO0mjQ==
 
 expo-file-system@~17.0.1:
   version "17.0.1"
