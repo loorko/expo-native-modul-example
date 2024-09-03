@@ -12,7 +12,7 @@
   "dependencies": {
     "expo": "~51.0.28",
     "expo-dev-client": "^4.0.25",
-    "expo-external-purchase": "^0.17.0",
+    "expo-external-purchase": "^0.21.0",
     "expo-status-bar": "~1.12.1",
     "expo-updates": "~0.25.24",
     "react": "18.2.0",

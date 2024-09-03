@@ -15,7 +15,8 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.instacarapp.exponativemodulexample",
       "entitlements": {
-        "com.apple.developer.storekit.external-purchase": true
+        "com.apple.developer.storekit.external-purchase": true,
+        "aps-environment": true 
       },
       "infoPlist": {
         "SKExternalPurchase": ["hu"]

@@ -2962,10 +2962,10 @@ expo-eas-client@~0.12.0:
   resolved "https://registry.yarnpkg.com/expo-eas-client/-/expo-eas-client-0.12.0.tgz#e8b6f7d33873e6f630f37f7bfc41646ae7b0b2a9"
   integrity sha512-Jkww9Cwpv0z7DdLYiRX0r4fqBEcI9cKqTn7cHx63S09JaZ2rcwEE4zYHgrXwjahO+tU2VW8zqH+AJl6RhhW4zA==
 
-expo-external-purchase@^0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/expo-external-purchase/-/expo-external-purchase-0.17.0.tgz#fa4b9ec0b49f336ecd381a817a31091dc89bba72"
-  integrity sha512-w9nmPxjuVgStFw1KCXfy0uY+41HApznXRz56ajZAdj6IcnOa/4MqWSUZP/qTsOY/6yaqF1Jhapdi00MDcO0mjQ==
+expo-external-purchase@^0.21.0:
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/expo-external-purchase/-/expo-external-purchase-0.21.0.tgz#ed79a65789f42b736b853550877b9ba16e5dc2a8"
+  integrity sha512-Yq8Hoh9bUUXfgcn2qiZRyGbOnFz6ezmhyIgJyGpdJUiJ2Z4W24rVe9EZXpyDJYGZFitjsi7FE1UpAkh+tXDvEQ==
 
 expo-file-system@~17.0.1:
   version "17.0.1"
