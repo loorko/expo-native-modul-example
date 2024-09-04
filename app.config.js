@@ -1,5 +1,5 @@
 const getEntitlement = () => { 
-  return { "com.apple.developer.storekit.external-purchase": true
+  return { "com.apple.developer.storekit.external-purchase": true }
 };
 
 export default {
@@ -19,7 +19,7 @@ export default {
     "bundleIdentifier": "com.instacarapp.exponativemodulexample",
     "entitlements": {
       ...getEntitlement(),
-      "aps-environment": true 
+      "aps-environment": "development" // https://developer.apple.com/documentation/bundleresources/entitlements/aps-environment/
     },
     "infoPlist": {
       "SKExternalPurchase": ["hu"]
@@ -38,5 +38,15 @@ export default {
     "eas": {
       "projectId": "9b7edee8-d172-493f-86ea-7d7fef844b51"
     }
-  }
+  },
+  "plugins": [
+    [
+      "@sentry/react-native/expo",
+      {
+        "organization": "instacar-technologies-kft",
+        "project": "expo-native-modul-example",
+        "url": "https://sentry.io/"
+      }
+    ]
+  ]
 }

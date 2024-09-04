@@ -5,10 +5,16 @@ import {
   View,
   Button,
   Alert } from 'react-native';
-import * as ExpoExternalPurchase from 'expo-external-purchase';
 import { useEffect } from 'react';
+import * as Sentry from '@sentry/react-native';
+import * as ExpoExternalPurchase from 'expo-external-purchase';
 
-export default function App() {
+Sentry.init({
+  dsn: 'https://1b75daa4a2773a6c3eac28f52775eb3b@o1258507.ingest.us.sentry.io/4507894851764224',
+  debug: true, // If `true`, Sentry will try to print out useful debugging information if something goes wrong with sending the event. Set it to `false` in production
+});
+
+const App =()=>{
   useEffect(()=>{
     console.log(ExpoExternalPurchase);
     const subscription = ExpoExternalPurchase.addExternalPurchaseListener(({ result: newResult }) => {
@@ -24,9 +30,11 @@ export default function App() {
         try {
           const result = await ExpoExternalPurchase.presentNoticeSheetAsync();
           console.log('Notice sheet presented successfully:', result);
+          Sentry.captureMessage(result, "debug");
           Alert.alert('It is working');
         } catch (error) {
           console.error('Failed to present notice sheet:', error);
+          Sentry.captureException(new Error(error));
           Alert.alert('Failed to present notice sheet:', error.message); // Add error message for user feedback
         }
       } else {
@@ -34,6 +42,7 @@ export default function App() {
       }
     } catch (error) {
       console.error('Failed to check if can present:', error);
+      Sentry.captureException(new Error(error));
       Alert.alert('Failed to check if can present:', error.message); // Add error message for user feedback
     }
   };
@@ -49,6 +58,8 @@ export default function App() {
     </View>
   );
 }
+
+export default Sentry.wrap(App);
 
 const styles = StyleSheet.create({
   container: {

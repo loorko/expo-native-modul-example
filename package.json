@@ -10,6 +10,7 @@
     "clear": "rm -rf node_modules"
   },
   "dependencies": {
+    "@sentry/react-native": "~5.22.0",
     "expo": "~51.0.28",
     "expo-dev-client": "^4.0.25",
     "expo-external-purchase": "^0.21.0",

@@ -10,9 +10,27 @@
     "preview": {
       "distribution": "internal"
     },
-    "production": {}
+    "production": {
+      "channel": "production",
+      "env": {
+        "APP_ENV": "production"
+      },
+      "ios": {
+        "resourceClass": "m-medium"
+      }
+    }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "ios": {
+        "bundleIdentifier": "com.instacarapp.exponativemodulexample",
+        "sku": "123321",
+        "appleId": "goreczky.roland@gmail.com",
+        "appleTeamId": "ZJDC99TB72",
+        "ascApiKeyPath": ".appStoreConnect/AuthKey_5TC66CN4B8.p8",
+        "ascApiKeyIssuerId": "f0261174-c7c9-4135-b248-8fd56f9fdf64",
+        "ascApiKeyId": "5TC66CN4B8"
+      }
+    }
   }
 }
